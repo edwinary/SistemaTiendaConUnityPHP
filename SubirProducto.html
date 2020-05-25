@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Panel De Control</title>
+<meta charset="utf8">
+</head>
+<body>
+ 
+<!--Formulario de producto-->
+
+<form action="CrearProducto.php" method="post">
+<p>Nombre: <input type="text" name="nombre" /></p>
+<p>Precio: <input type="text" name="precio" /></p>
+<p>Descripcion: <input type="text" name="descripcion" /></p>
+
+<label for="Tienda">Tienda: </label>
+
+<select name="tienda" id="tienda" onchange="saveTheme(this.value);">
+
+  <option value="Pollo La Cabaña">Pollo La Cabaña</option>
+  <option value="AutoRepuestos Montoya">AutoRepuestos Montoya</option>
+  <option value="Nissan">Nissan</option>
+  <option value="Pulperia Los 3 hermanos">Pulperia Los 3 hermanos</option>
+</select>
+
+<p><input type="submit" value="Crear Producto" /></p>
+</form>
+
+function guardarCookie(nombre,valor) {
+         document.cookie = nombre+"="+valor;
+         }
+
+<script>
+          function guardarCookie(nombre,valor) {
+         document.cookie = nombre+"="+valor;
+         }
+
+</script>
+
+
+</body>
+</html>
+
+

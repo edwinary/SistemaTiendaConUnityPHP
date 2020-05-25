@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Panel De Control</title>
+<meta charset="utf8">
+</head>
+<body >
+ 
+<!--Formulario de producto-->
+
+<form action="CrearProducto.php" method="post">
+<p>Nombre: <input type="text" name="nombre" /></p>
+<p>Precio: <input type="text" name="precio" /></p>
+<p>Descripcion: <input type="text" name="descripcion" /></p>
+
+<label for="Tienda">Tienda: </label>
+
+<select name="tienda" id="tienda" >
+
+  <option value="Pollo La Cabaña">Pollo_La_Cabaña</option>
+  <option value="AutoRepuestos Montoya">AutoRepuestos_Montoya</option>
+  <option value="Nissan">Nissan</option>
+  <option value="Pulperia Los 3 hermanos">Pulperia_Los_3_hermanos</option>
+ </select>
+
+<p>Subir Imagen
+  <input type="file" name="NombreArchivo" id="NombreArchivo"></p>
+
+
+<form action="CrearProducto.php" method="post" enctype="multipart/form-data">
+
+  
+
+<p><input type="submit" value="Crear Producto" /></p>
+</form>
+
+
+
+<script type="text/javascript">
+
+    function kk(){
+
+  var   lol = readCookie("tienda");
+
+    alert(lol);
+}
+
+          function guardarCookie(nombre,valor) {
+         document.cookie = nombre+"="+valor;
+         }
+         
+            guardarCookie("color","color ggg")
+
+            readCookie("tienda");
+
+
+
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+
+</script>
+
+
+</body>
+</html>
+
